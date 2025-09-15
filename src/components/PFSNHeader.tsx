@@ -7,7 +7,7 @@ interface HeaderProps {
 }
 
 const PFSNHeader: React.FC<HeaderProps> = ({ 
-  currentPage = 'NFL',
+  currentPage = 'MLB',
   logoUrl = "https://statico.profootballnetwork.com/wp-content/uploads/2025/06/12093424/tools-navigation-06-12-25.jpg",
   logoAlt = "PFSN Logo"
 }) => {
@@ -73,7 +73,7 @@ const PFSNHeader: React.FC<HeaderProps> = ({
                 height="124"
               />
             </a>
-            <span className="mobile-game-title md:hidden">NHL Duo</span>
+            <span className="mobile-game-title md:hidden">MLB Duo</span>
           </div>
           
           <div className="pfsn-tagline">

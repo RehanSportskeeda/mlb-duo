@@ -68,7 +68,7 @@ const CompletionScreen: React.FC<CompletionScreenProps> = ({ gameStats, onPlayAr
   const handleShare = async () => {
     trackCompletionScreenAction('share');
     const timeTaken = getTimeTaken();
-    const shareText = `🏒 Just solved today's NHL Duo in ${timeTaken}! 🏒
+    const shareText = `⚾ Just solved today's MLB Duo in ${timeTaken}! ⚾
 
 ⚡ ${gameStats.moves} moves
 💡 ${gameStats.hintsUsed} hints used
@@ -85,7 +85,7 @@ Can you beat my time? Play now:`;
     if (navigator.share) {
       try {
         await navigator.share({
-          title: 'NBA Duo',
+          title: 'MLB Duo',
           text: shareText,
           url: gameUrl,
         });
@@ -126,7 +126,7 @@ Can you beat my time? Play now:`;
           </button>
           
           <div className="flex items-center justify-center gap-3 mb-2">
-            <span className="text-xl">🏒</span>
+            <span className="text-xl">⚾</span>
             <h2 className="text-2xl font-bold text-white">Game Completed!</h2>
           </div>
           <div className="flex items-center justify-center gap-2">

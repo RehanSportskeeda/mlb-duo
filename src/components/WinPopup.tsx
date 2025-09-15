@@ -49,7 +49,7 @@ const WinPopup: React.FC<WinPopupProps> = ({ gameStats, onClose, onPlayAgain }) 
 
   const handleShare = async () => {
     const timeTaken = getTimeTaken();
-    const shareText = `🏀 Just solved today's NBA Duo in ${timeTaken}! 🏀
+    const shareText = `⚾ Just solved today's MLB Duo in ${timeTaken}! ⚾
 
 ⚡ ${gameStats.moves} moves
 💡 ${gameStats.hintsUsed} hints used
@@ -69,7 +69,7 @@ Can you beat my time? Play now:`;
       console.log('Using native share API');
       try {
         await navigator.share({
-          title: 'NBA Duo',
+          title: 'MLB Duo',
           text: shareText,
           url: gameUrl,
         });

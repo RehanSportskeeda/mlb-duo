@@ -82,7 +82,7 @@ const GameTab: React.FC<GameTabProps> = ({
                       }
                     </h3>
                     <p className="text-gray-600">
-                      Fill the grid with 🥅 and 🏒
+                      Fill the grid with ⚾ and 🧢
                     </p>
                   </div>
                   <button
@@ -199,7 +199,7 @@ const GameTab: React.FC<GameTabProps> = ({
                         return minutes > 0 ? `${minutes}m ${remainingSeconds}s` : `${remainingSeconds}s`;
                       })() : '0s';
                     
-                    const shareText = `🏀 Just solved today's NBA Duo in ${timeTaken}! 🏀
+                    const shareText = `⚾ Just solved today's MLB Duo in ${timeTaken}! ⚾
 
 ⚡ ${gameStats.moves} moves
 💡 ${gameStats.hintsUsed} hints used
@@ -210,7 +210,7 @@ Can you beat my time? Play now:`;
                     if (navigator.share) {
                       try {
                         await navigator.share({
-                          title: 'NBA Duo',
+                          title: 'MLB Duo',
                           text: shareText,
                           url: gameUrl,
                         });
@@ -313,7 +313,7 @@ Can you beat my time? Play now:`;
                       }
                     </h3>
                     <p className="text-gray-600">
-                      Fill the grid with 🥅 and 🏒
+                      Fill the grid with ⚾ and 🧢
                     </p>
                   </div>
                     <button
@@ -430,7 +430,7 @@ Can you beat my time? Play now:`;
                         return minutes > 0 ? `${minutes}m ${remainingSeconds}s` : `${remainingSeconds}s`;
                       })() : '0s';
                     
-                    const shareText = `🏀 Just solved today's NBA Duo in ${timeTaken}! 🏀
+                    const shareText = `⚾ Just solved today's MLB Duo in ${timeTaken}! ⚾
 
 ⚡ ${gameStats.moves} moves
 💡 ${gameStats.hintsUsed} hints used
@@ -441,7 +441,7 @@ Can you beat my time? Play now:`;
                     if (navigator.share) {
                       try {
                         await navigator.share({
-                          title: 'NBA Duo',
+                          title: 'MLB Duo',
                           text: shareText,
                           url: gameUrl,
                         });

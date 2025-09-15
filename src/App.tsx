@@ -311,7 +311,7 @@ function App() {
       {/* SEO Meta Tags */}
       <SEOHead />
       {/* PFSN Header */}
-      <PFSNHeader currentPage="NHL" />
+      <PFSNHeader currentPage="MLB" />
 
       {/* Game Navigation Bar */}
       <TopBar
@@ -421,7 +421,7 @@ function App() {
       <RaptiveFooterAd />
       
       {/* Footer */}
-      <PFSNFooter currentPage="NBA" />
+      <PFSNFooter currentPage="MLB" />
     </div>
   );
 }

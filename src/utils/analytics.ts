@@ -5,7 +5,7 @@ declare global {
   }
 }
 
-const GA_PREFIX = 'GAME.NHL_DUO.';
+const GA_PREFIX = 'GAME.MLB_DUO.';
 
 export const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
   if (typeof window !== 'undefined' && window.gtag) {

@@ -30,9 +30,9 @@ export const validateGrid = (grid: Cell[][], constraints: Constraint[]): { viola
       
       if (cell1.value && cell2.value && cell3.value &&
           cell1.value === cell2.value && cell2.value === cell3.value) {
-        const symbol = cell1.value === 'goal' ? 
-          `3 consecutive 🥅 in row ${row + 1}` :
-          `3 consecutive 🏒 in row ${row + 1}`;
+        const symbol = cell1.value === 'baseball' ? 
+          `3 consecutive ⚾ in row ${row + 1}` :
+          `3 consecutive 🧢 in row ${row + 1}`;
         messages.push(symbol);
         violations.add(`${row},${col}`);
         violations.add(`${row},${col + 1}`);
@@ -49,9 +49,9 @@ export const validateGrid = (grid: Cell[][], constraints: Constraint[]): { viola
       
       if (cell1.value && cell2.value && cell3.value &&
           cell1.value === cell2.value && cell2.value === cell3.value) {
-        const symbol = cell1.value === 'goal' ? 
-          `3 consecutive 🥅 in column ${col + 1}` :
-          `3 consecutive 🏒 in column ${col + 1}`;
+        const symbol = cell1.value === 'baseball' ? 
+          `3 consecutive ⚾ in column ${col + 1}` :
+          `3 consecutive 🧢 in column ${col + 1}`;
         messages.push(symbol);
         violations.add(`${row},${col}`);
         violations.add(`${row + 1},${col}`);
@@ -63,16 +63,16 @@ export const validateGrid = (grid: Cell[][], constraints: Constraint[]): { viola
   // Check equal number of suns and moons in each row and column
   for (let row = 0; row < size; row++) {
     const rowCells = grid[row].filter(cell => cell.value !== null);
-    const goals = rowCells.filter(cell => cell.value === 'goal').length;
-    const sticks = rowCells.filter(cell => cell.value === 'stick').length;
+    const baseballs = rowCells.filter(cell => cell.value === 'baseball').length;
+    const caps = rowCells.filter(cell => cell.value === 'cap').length;
     
-    if (rowCells.length === size && goals !== sticks) {
-      const goalCount = goals;
-      const stickCount = sticks;
-      if (goalCount > stickCount) {
-        messages.push(`${goalCount} 🥅 in row ${row + 1} (should be ${size/2})`);
+    if (rowCells.length === size && baseballs !== caps) {
+      const baseballCount = baseballs;
+      const capCount = caps;
+      if (baseballCount > capCount) {
+        messages.push(`${baseballCount} ⚾ in row ${row + 1} (should be ${size/2})`);
       } else {
-        messages.push(`${stickCount} 🏒 in row ${row + 1} (should be ${size/2})`);
+        messages.push(`${capCount} 🧢 in row ${row + 1} (should be ${size/2})`);
       }
       for (let col = 0; col < size; col++) {
         violations.add(`${row},${col}`);
@@ -82,16 +82,16 @@ export const validateGrid = (grid: Cell[][], constraints: Constraint[]): { viola
 
   for (let col = 0; col < size; col++) {
     const colCells = grid.map(row => row[col]).filter(cell => cell.value !== null);
-    const goals = colCells.filter(cell => cell.value === 'goal').length;
-    const sticks = colCells.filter(cell => cell.value === 'stick').length;
+    const baseballs = colCells.filter(cell => cell.value === 'baseball').length;
+    const caps = colCells.filter(cell => cell.value === 'cap').length;
     
-    if (colCells.length === size && goals !== sticks) {
-      const goalCount = goals;
-      const stickCount = sticks;
-      if (goalCount > stickCount) {
-        messages.push(`${goalCount} 🥅 in column ${col + 1} (should be ${size/2})`);
+    if (colCells.length === size && baseballs !== caps) {
+      const baseballCount = baseballs;
+      const capCount = caps;
+      if (baseballCount > capCount) {
+        messages.push(`${baseballCount} ⚾ in column ${col + 1} (should be ${size/2})`);
       } else {
-        messages.push(`${stickCount} 🏒 in column ${col + 1} (should be ${size/2})`);
+        messages.push(`${capCount} 🧢 in column ${col + 1} (should be ${size/2})`);
       }
       for (let row = 0; row < size; row++) {
         violations.add(`${row},${col}`);
@@ -161,8 +161,8 @@ export const getProgress = (grid: Cell[][]): number => {
 };
 
 export const getNextValue = (current: CellValue): CellValue => {
-  if (current === null) return 'goal';
-  if (current === 'goal') return 'stick';
+  if (current === null) return 'baseball';
+  if (current === 'baseball') return 'cap';
   return null;
 };
 
@@ -178,8 +178,8 @@ export const generatePuzzle = (size: number): Puzzle => {
       // Alternate pattern with some randomization
       const isEven = (row + col) % 2 === 0;
       solution[row][col] = Math.random() > 0.5
-        ? (isEven ? 'goal' : 'stick')
-        : (isEven ? 'stick' : 'goal');
+        ? (isEven ? 'baseball' : 'cap')
+        : (isEven ? 'cap' : 'baseball');
     }
   }
   

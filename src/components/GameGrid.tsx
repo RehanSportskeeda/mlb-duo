@@ -29,10 +29,10 @@ const GameGrid: React.FC<GameGridProps> = ({
   };
 
   const renderCellContent = (cell: Cell) => {
-    if (cell.value === 'goal') {
-      return <span className="text-2xl sm:text-3xl">🥅</span>;
-    } else if (cell.value === 'stick') {
-      return <span className="text-2xl sm:text-3xl">🏒</span>;
+    if (cell.value === 'baseball') {
+      return <span className="text-2xl sm:text-3xl">⚾</span>;
+    } else if (cell.value === 'cap') {
+      return <span className="text-2xl sm:text-3xl">🧢</span>;
     }
     return null;
   };
