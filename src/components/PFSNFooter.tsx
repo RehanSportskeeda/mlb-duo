@@ -48,6 +48,11 @@ const PFSNFooter: React.FC<FooterProps> = ({ currentPage = 'MLB' }) => {
                 <li><a href="https://www.profootballnetwork.com/cta-guess-nfl-prospects-tools/">NFL Draft Guessing Game</a></li>
                 <li><a href="https://www.profootballnetwork.com/nfl-word-fumble-cta/">NFL Word Fumble</a></li>
               </ul>
+
+              <h3 className="footer-column-title footer-subheading">MLB Games</h3>
+              <ul className="footer-links">
+                <li className="current-page"><a href="/">MLB Duo</a></li>
+              </ul>
             </div>
 
             <div className="footer-column">
@@ -78,27 +83,6 @@ const PFSNFooter: React.FC<FooterProps> = ({ currentPage = 'MLB' }) => {
                 <li><a href="https://www.profootballnetwork.com/about-us/">About PFSN</a></li>
                 <li><a href="https://www.profootballnetwork.com/contact-media-inquiries-pro-football-network/">Contact Us</a></li>
                 <li><a href="https://www.profootballnetwork.com/privacy-policy/">Privacy Policy</a></li>
-              </ul>
-
-              <h3 className="footer-column-title footer-subheading">MLB Tools</h3>
-              <ul className="footer-links">
-                <li><a href="https://www.profootballnetwork.com/mlb-mock-draft-simulator">MLB Mock Draft Simulator</a></li>
-                <li><a href="https://www.profootballnetwork.com/mlb-player-guessing-game">MLB Player Guessing Game</a></li>
-              </ul>
-
-              <h3 className="footer-column-title footer-subheading">MLB Games</h3>
-              <ul className="footer-links">
-                <li className="current-page"><a href="/">MLB Duo</a></li>
-              </ul>
-
-              <h3 className="footer-column-title footer-subheading">MLB Resources</h3>
-              <ul className="footer-links">
-                <li><a href="https://www.profootballnetwork.com/mlb">MLB News</a></li>
-                <li><a href="https://www.profootballnetwork.com/mlb/standings">MLB Standings</a></li>
-                <li><a href="https://www.profootballnetwork.com/mlb/stats">MLB Stats</a></li>
-                <li><a href="https://www.profootballnetwork.com/nfl-player-guessing-game/">NFL Player Guessing Game</a></li>
-                <li><a href="https://www.profootballnetwork.com/cta-guess-nfl-prospects-tools/">NFL Draft Guessing Game</a></li>
-                <li><a href="https://www.profootballnetwork.com/nfl-word-fumble-cta/">NFL Word Fumble</a></li>
               </ul>
             </div>
           </div>
