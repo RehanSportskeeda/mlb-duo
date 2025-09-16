@@ -27,10 +27,10 @@ const PFSNFooter: React.FC<FooterProps> = ({ currentPage = 'MLB' }) => {
             </div>
 
             <div className="footer-column">
-              <h3 className="footer-column-title">MLB Tools & Games</h3>
+              <h3 className="footer-column-title">NHL Tools & Games</h3>
               <ul className="footer-links">
-                <li className="current-page"><a href="/">MLB Duo</a></li>
-                <li><a href="https://www.profootballnetwork.com/mlb-player-guessing-game/">MLB Player Guessing Game</a></li>
+                <li><a href="https://interactive-tango-pu-7of9.bolt.host/">NHL Duo</a></li>
+                <li><a href="https://www.profootballnetwork.com/nhl-player-guessing-game/">NHL Player Guessing Game</a></li>
               </ul>
 
               <h3 className="footer-column-title footer-subheading">NFL Tools</h3>
@@ -80,13 +80,6 @@ const PFSNFooter: React.FC<FooterProps> = ({ currentPage = 'MLB' }) => {
                 <li><a href="https://www.profootballnetwork.com/privacy-policy/">Privacy Policy</a></li>
               </ul>
 
-              <h3 className="footer-column-title footer-subheading">MLB Resources</h3>
-              <ul className="footer-links">
-                <li><a href="https://www.profootballnetwork.com/mlb">MLB News</a></li>
-                <li><a href="https://www.profootballnetwork.com/mlb/standings">MLB Standings</a></li>
-                <li><a href="https://www.profootballnetwork.com/mlb/stats">MLB Stats</a></li>
-              </ul>
-
               <h3 className="footer-column-title footer-subheading">MLB Tools</h3>
               <ul className="footer-links">
                 <li><a href="https://www.profootballnetwork.com/mlb-mock-draft-simulator">MLB Mock Draft Simulator</a></li>
@@ -96,6 +89,16 @@ const PFSNFooter: React.FC<FooterProps> = ({ currentPage = 'MLB' }) => {
               <h3 className="footer-column-title footer-subheading">MLB Games</h3>
               <ul className="footer-links">
                 <li className="current-page"><a href="/">MLB Duo</a></li>
+              </ul>
+
+              <h3 className="footer-column-title footer-subheading">MLB Resources</h3>
+              <ul className="footer-links">
+                <li><a href="https://www.profootballnetwork.com/mlb">MLB News</a></li>
+                <li><a href="https://www.profootballnetwork.com/mlb/standings">MLB Standings</a></li>
+                <li><a href="https://www.profootballnetwork.com/mlb/stats">MLB Stats</a></li>
+                <li><a href="https://www.profootballnetwork.com/nfl-player-guessing-game/">NFL Player Guessing Game</a></li>
+                <li><a href="https://www.profootballnetwork.com/cta-guess-nfl-prospects-tools/">NFL Draft Guessing Game</a></li>
+                <li><a href="https://www.profootballnetwork.com/nfl-word-fumble-cta/">NFL Word Fumble</a></li>
               </ul>
             </div>
           </div>
